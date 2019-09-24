@@ -1,0 +1,31 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+.cd-dropdown-wrapper * :not(button){
+	margin: 0;
+	padding: 0;
+	border: 0;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+#test-menu > cd-dropdown-wrapper   article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section, main {
+	display: block;
+}
+#test-menu > cd-dropdown-wrapper  ol, ul {
+	list-style: none;
+}
+#test-menu > cd-dropdown-wrapper  blockquote, q {
+	quotes: none;
+}
+#test-menu > cd-dropdown-wrapper  blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+#test-menu > cd-dropdown-wrapper table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}

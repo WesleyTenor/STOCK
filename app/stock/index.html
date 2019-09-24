@@ -1,0 +1,101 @@
+<h1>STOCK</h1>
+<br>
+<br>
+
+
+<div class="form-container">
+    <form method="post">
+        
+        <div class="form-group col-md-6">
+            <label for="type">Type</label>
+            <input type="text" id="type" class="form-control" ng-model="vm.item.type" required />
+        </div>
+        
+        <div class="form-group col-md-6">
+            <label for="brand">Brand</label>
+            <input type="text" id="brand" class="form-control" ng-model="vm.item.brand" required />
+        </div>
+        
+        <div class="form-group col-md-6">
+            <label for="characteristics">Characteristics</label>
+            <input type="text" id="characteristics" class="form-control" ng-model="vm.item.characteristics" required />
+        </div>
+        
+        <div class="form-group col-md-6">
+            <label for="size">Size</label>
+            <input type="text" id="size" class="form-control" ng-model="vm.item.size" required />
+        </div>
+        
+        <div class="form-group col-md-6">
+            <label for="color">Color</label>
+            <input type="text" id="color" class="form-control" ng-model="vm.item.color" required />
+        </div>
+        
+        <div class="form-group col-md-6">
+            <label for="valueOnTag">value(Tag)</label>
+            <input type="number" id="valueOnTag" class="form-control" ng-model="vm.item.valueOnTag" required />
+        </div>
+        
+        <div class="form-group col-md-6">
+            <label for="valuePaid">Value(Paid)</label>
+            <input type="number" id="valuePaid" class="form-control" ng-model="vm.item.valuePaid" required />
+        </div>
+        
+        <div class="form-group col-md-6">
+            <label for="sugestedPrice">Sugested(Price)</label>
+            <input type="number" id="sugestedPrice" class="form-control" ng-model="vm.item.sugestedPrice" required />
+        </div>
+        
+        <div class="form-group col-md-6">
+            <label for="amount">Amount</label>
+            <input type="number" id="amount" class="form-control" ng-model="vm.item.amount" required />
+        
+        
+    </form>
+    <br>
+    <div class="form-group">
+            <button class="btn btn-primary" ng-click="vm.saveItem()">Save</button>
+        </div>
+</div>
+
+<table class="table table-hover" ng-if="vm.items.length > 0" st-table="rowCollection">
+    <thead>
+      <tr>
+        <th scope="col">Cod</th>
+        <th scope="col">Type</th>
+        <th scope="col">characteristics</th>
+        <th scope="col">Size</th>
+        <th scope="col">Color</th>
+        <th scope="col">Value (tag)</th>
+        <th scope="col">Value (paid)</th>
+        <th scope="col">Value paid (100%)</th>
+        <th scope="col">price suggested</th>
+        <th scope="col">Created</th>
+        <th scope="col">Amount</th>
+        <th scope="col">Brand</th>
+
+        
+
+      </tr>
+    </thead>
+    <tbody>
+      <tr ng-repeat="item in vm.items">          
+        <th scope="row">{{item._id}}</th>     
+        <td>{{item.type}} </td>
+        <td>{{item.characteristics}}</td>
+        <td>{{item.size}}</td>
+        <td>{{item.color}}</td>
+        <td>{{item.valueOnTag|currency}}</td>
+        <td>{{item.valuePaid|currency}}</td>
+        <td>{{item.valuePaid * 2|currency}}</td>
+        <td>{{item.sugestedPrice|currency}}</td>
+        <td>{{item.createdDate|date}}</td>
+        <td><b>{{item.amount || 0}}</b></td>
+        <td>{{item.brand}} </td>
+        <td><button type="button" class="btn btn-warning" ng-click="vm.editItem(item)">Edit</button></td>
+        <td><button type="button" class="btn btn-danger" ng-click="vm.deleteItem(item)">Delete</button></td>        
+      </tr>
+            
+    </tbody>
+  </table>  
+

@@ -1,0 +1,93 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    
+    <link href="Assets/themes/kingadmin/css/bootstrap.css" rel="stylesheet"/>   
+    
+    <!-- JS -->
+    <script src="Assets/common/js/jquery-2.1.4.min.js"></script>
+    <script src="Assets/common/js/modernizr-2.8.3.js"></script>
+    <script src="Assets/common/js/angular.min.js"></script>
+
+    <script src="Assets/themes/kingadmin/js/bootstrap.min.js"></script>
+    <script src="Assets/themes/kingadmin/js/king-common.js"></script>
+    <script src="Assets/themes/kingadmin/js/king-components.js"></script>
+
+    <script src="Assets/libs/moment/moment.min.js"></script>
+    <script src="Assets/libs/moment/moment-with-locales.min.js"></script>
+    <script src="Assets/libs/moment/moment-duration-format.js"></script>
+    <script src="Assets/libs/angular-table/angular-table.js"></script>
+    <script src="Assets/libs/angular-toggle-switch/angular-toggle-switch.js"></script>
+    <script src="Assets/libs/ui-bootstrap/ui-bootstrap.js"></script>
+    <script src="Assets/libs/ui-router-tabs/ui-router-tabs.js"></script>
+    <script src="Assets/libs/signature-pad/signature-pad.js"></script>
+    <script src="Assets/libs/signature-pad/signature-pad.min.js"></script>
+    <script src="Assets/libs/angular-sanitize/angular-sanitize.js"></script>
+    <script src="Assets/libs/autoNumeric/autoNumeric-1.9.25.min.js"></script>
+    <script src="Assets/libs/ui-select/js/select.min.js"></script>
+    <script src="Assets/libs/angular-local-storage/angular-local-storage.min.js"></script>
+    <script src="Assets/libs/angular-ui-router/angular-ui-router.min.js"></script>
+    <script src="Assets/libs/angular-ui-router/statehelper.min.js"></script>
+    <script src="Assets/libs/tree-grid-directive/tree-grid-directive.js"></script>
+    <script src="Assets/libs/angular-block-ui-master/angular-block-ui.min.js"></script>
+    <script src="Assets/libs/angular-xeditable/xeditable.min.js"></script>
+    <script src="Assets/libs/datetimepicker/bootstrap-datetimepicker.min.js"></script>
+    <script src="Assets/libs/angular-gridster/angular-gridster.min.js"></script>
+    <script src="Assets/libs/angular-translate/angular-translate.min.js"></script>
+    <script src="Assets/libs/angular-translate/angular-translate-loader-static-files.min.js"></script>
+    <script src="Assets/libs/sweetalert2/sweetalert2.min.js"></script>
+    <script src="Assets/libs/toastr/toastr.min.js"></script>
+    <script src="Assets/libs/angular-bootstrap-calendar/js/angular-bootstrap-calendar.min.js"></script>
+    <script src="Assets/libs/facebook-flux/facebook-flux.js"></script>
+    <script src="Assets/libs/jquery.masked-input/jquery.masked-input.js"></script>
+    <script src="Assets/libs/angular-bootstrap-colorpicker/js/bootstrap-colorpicker-module.js"></script>
+    <script src="Assets/libs/angular-flow/angular-flow.js"></script>
+    <script src="Assets/libs/event-emitter/EventEmitter.js"></script>
+    <script src="Assets/libs/angular-permission/angular-permission.js"></script>
+    <script src="Assets/libs/angular-permission/angular-permission-ui.js"></script>
+    <script src="Assets/libs/angular-permission/angular-permission-ng.js"></script>
+    <script src="Assets/libs/angular-tooltips/angular-tooltips.min.js"></script>
+    <script src="Assets/libs/angularjs-gauge/angularjs-gauge.min.js"></script>
+    <script src="Assets/libs/angular-chart/Chart.js"></script>
+    <script src="Assets/libs/angular-chart/angular-chart.min.js"></script>
+    <script src="Assets/libs/angular-ui-calendar/calendar.js"></script>
+    <script src="Assets/libs/fullcalendar/fullcalendar.min.js"></script>
+    <script src="Assets/libs/gcal/gcal.min.js"></script>
+    <script src="Assets/libs/angular-time-line/angular-time-line.js"></script>
+
+    <title>MEAN Stack User Registration and Login Example Application</title>
+    <meta name="viewport" content="width=device-width" />
+</head>
+<body class="container">
+    <!-- header -->
+    <header>
+        <ul class="nav nav-tabs">
+            <li ng-class="{active: activeTab === 'home'}"><a ui-sref="home">Home</a></li>
+            <li ng-class="{active: activeTab === 'account'}"><a ui-sref="account">Account</a></li>
+            <li ng-class="{active: activeTab === 'stock'}"><a ui-sref="stock">Stock</a></li>
+            <li><a href="/login" target="_self">Logout</a></li>
+        </ul>
+        <div class="flash-message" ng-if="flash">
+            <div class="{{'alert alert-' + flash.type}}" ng-bind="flash.message"></div>
+        </div>
+    </header>
+
+    <!-- main -->
+    <main ui-view></main>
+
+    <!-- footer -->
+    <footer></footer>
+
+    <!-- application scripts -->
+    <script src="app.js"></script>
+    <script src="app-services/user.service.js"></script>
+    <script src="app-services/flash.service.js"></script>
+    <script src="app-services/stock-service.js"></script>
+    <script src="home/index.controller.js"></script>
+    <script src="account/index.controller.js"></script>
+    <script src="stock/index.controller.js"></script>
+    <link rel="stylesheet"; href="https://unpkg.com/ng-table@2.0.2/bundles/ng-table.min.css">
+    <script src="https://unpkg.com/ng-table@2.0.2/bundles/ng-table.min.js"></script>
+</body>
+</html>
